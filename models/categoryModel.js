@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//modelo que eh salvo no mongodb
 const categorySchema = new mongoose.Schema(
   {
     name: {
@@ -10,6 +11,8 @@ const categorySchema = new mongoose.Schema(
     },
   },
   {
+    //criado em ...
+    //alterado em ...
     timestamps: true,
   },
 );

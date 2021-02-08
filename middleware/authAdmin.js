@@ -1,6 +1,6 @@
 const Users = require('../models/userModel');
 
-//recupera do banco de dados o user e verifica se eh admin ou nao
+//dada uma requisição que está chegando, verifica se ela possui admin ou nao
 const authAdmin = async (req, res, next) => {
   try {
     const user = await Users.findOne({

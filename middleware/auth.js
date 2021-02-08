@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 //dada uma requisição que está chegando, verifica se ela possui um JWT válido
 const auth = (req, res, next) => {
   try {
+    //guarda na constante token o header[authorization]
     const token = req.header('Authorization');
 
     if (!token) return res.status(400).json({ msg: 'autenticacao invalida' });

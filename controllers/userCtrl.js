@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const userCtrl = {
+  //cria usuario
   register: async (req, res) => {
     try {
       //recebe do browser os parametros
@@ -47,6 +48,7 @@ const userCtrl = {
       return res.status(500).json({ msg: error.message });
     }
   },
+  // login usuario
   login: async (req, res) => {
     try {
       //recupera os dados do body da requisicao
@@ -76,6 +78,7 @@ const userCtrl = {
       res.status(500).json({ msg: error.message });
     }
   },
+  // logout usuario
   logout: async (req, res) => {
     try {
       //limpar o cookie do navegador
@@ -86,6 +89,7 @@ const userCtrl = {
       return res.json({ msg: error.message });
     }
   },
+  //verifica token
   refreshToken: (req, res) => {
     try {
       //recupera o token do cookie e verifica se existe
@@ -106,6 +110,7 @@ const userCtrl = {
       return res.status(500).json({ msg: error.message });
     }
   },
+  //busca os usuarios
   getUser: async (req, res) => {
     try {
       //verifica no mongo se tem algum usuario com o id passado caso positivo quarda os dados completos na variavel - retornando sem o password
