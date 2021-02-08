@@ -21,7 +21,7 @@ const userCtrl = {
       //encript a senha
       const passordHash = await bcrypt.hash(password, 10);
 
-      //cria o user para saber no banco sequindo os parametros do userModel
+      //cria o user para salvar no banco sequindo os parametros do userModel
       const newUser = new Users({
         name,
         email,
