@@ -37,6 +37,7 @@ const categoryCtrl = {
     try {
       //busca no mongo pelo id e deleta
       await Category.findByIdAndDelete(req.params.id);
+
       res.json({ msg: 'categoria deletada' });
     } catch (error) {
       return res.status(500).json({ msg: error.message });
@@ -46,8 +47,9 @@ const categoryCtrl = {
   updateCategory: async (req, res) => {
     try {
       const { name } = req.body;
-      //metodo do mongo busca pelo id, alterar o nome
+      //metodo do mongo busca pelo id
       await Category.findByIdAndUpdate({ _id: req.params.id }, { name });
+
       res.json({ msg: 'Categoria atualizada' });
     } catch (error) {
       return res.status(500).json({ msg: error.message });
