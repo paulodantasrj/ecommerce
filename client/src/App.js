@@ -1,10 +1,19 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { DataProvider } from './GlobalState';
+import Header from './components/Headers';
+import Pages from './pages';
 
 const App = () => {
   return (
-    <div>
-      <h1>ecommerce</h1>
-    </div>
+    <DataProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Pages />
+        </div>
+      </BrowserRouter>
+    </DataProvider>
   );
 };
 
