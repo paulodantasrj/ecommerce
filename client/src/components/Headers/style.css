@@ -6,53 +6,45 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
 }
-
+header svg {
+  font-size: 50px;
+}
 header .logo {
-  flex: 1;
+  width: 300px;
 }
-header .logo img {
-  width: 250px;
+header .user {
+  display: flex;
+  width: 500px;
+  justify-content: flex-end;
 }
-
-header a {
-  text-transform: uppercase;
-  color: var(--primary-color);
+header .user_box {
+  display: flex;
+  color: var(--light-color);
+  margin: 0 50px;
 }
-
-header ul li {
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-  padding: 0 20px;
+header .user_box span {
 }
-header ul li:hover {
-  font-weight: bolder;
-  transition: all 0.2s ease-in-out;
-}
-
-header .menu {
-  display: none;
+header .user a {
+  color: var(--dark-color);
+  margin: 0 5px;
 }
 header .cart-icon {
   font-size: 35px;
   position: relative;
   margin-right: 20px;
-  opacity: 0.7;
-  transition: all 0.2s ease-in-out;
 }
-header .cart-icon:hover {
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
+header .cart-icon a {
+  color: var(--light-color);
 }
-
 header .cart-icon span {
-  background: var(--primary-color);
+  background: var(--dark-color);
   border-radius: 20px;
-  color: var(--secondary-color);
+  color: var(--light-color);
   position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 5px 7px;
+  top: -2px;
+  right: -2px;
+  padding: 7px 9px;
   font-size: 10px;
 }

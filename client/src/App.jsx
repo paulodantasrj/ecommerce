@@ -10,10 +10,11 @@ const App = () => {
     <DataProvider>
       {/*responsável por informar pra nossa aplicação que a partir de onde ele é chamado teremos um roteamento de componentes*/}
       <BrowserRouter>
+      <Header />
         <div className="App">
-          <Header />
           <Pages />
         </div>
+        {/*footer*/}
       </BrowserRouter>
     </DataProvider>
   );
