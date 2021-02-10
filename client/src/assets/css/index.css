@@ -1,22 +1,40 @@
-/***************Font Family****************/
+/*************** Font Family ****************/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
-/***************Reset CSS****************/
+/*************** Reset ****************/
 @import url('./reset.css');
 
-body {
-  font-family: Nunito, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+:root {
+  --bg-primary-color: #131313;
+  --bg-secondary-color: #1b1b1b;
+
+  --box-primary-shadow: 0px 0px 100px 20px rgba(17, 17, 17, 1);
+  --box-secondary-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1);
+
+  --primary-color: #cf052d;
+  --secondary-color: #dadada;
+
+  --font-family: Nunito, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary-color);
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .App {
+  background-color: var(--bg-secondary-color);
+  box-shadow: var(--box-shadow);
   max-width: 1230px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
-  box-shadow: 0 0 35 #eee;
 }
 
-/***************Reset CSS****************/
+/*************** Header ****************/
 @import url('../../components/Headers/style.css');
+
+/*************** Produto ****************/
+@import url('../../pages/products/style.css');

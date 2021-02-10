@@ -6,7 +6,9 @@ import Pages from './pages';
 
 const App = () => {
   return (
+    //Armazenar o GlobalState por toda a aplicação
     <DataProvider>
+      {/*responsável por informar pra nossa aplicação que a partir de onde ele é chamado teremos um roteamento de componentes*/}
       <BrowserRouter>
         <div className="App">
           <Header />

@@ -1,44 +1,55 @@
 header {
-  min-height: 70px;
+  min-height: 100px;
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 header .logo {
   flex: 1;
 }
+header .logo img {
+  width: 250px;
+}
 
 header a {
   text-transform: uppercase;
-  color: #ec407a;
+  color: var(--primary-color);
 }
 
 header ul li {
   display: inline-block;
-  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
   padding: 0 20px;
 }
 header ul li:hover {
-  opacity: 1;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
 }
 
 header .menu {
   display: none;
 }
 header .cart-icon {
+  font-size: 35px;
   position: relative;
   margin-right: 20px;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+header .cart-icon:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
 }
 
 header .cart-icon span {
-  background: #ab47bc;
+  background: var(--primary-color);
   border-radius: 20px;
-  color: white;
+  color: var(--secondary-color);
   position: absolute;
   top: -10px;
   right: -10px;
