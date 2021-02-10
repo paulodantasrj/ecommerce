@@ -20,7 +20,10 @@ const index = () => {
           <Link to='/'>Produtos</Link>
         </li>
         <li>
-          <Link to='/login'>Login / Cadastro</Link>
+          <Link to='/login'>Entrar</Link>
+        </li>
+        <li>
+          <Link to='/register'>Cadastro</Link>
         </li>
         <li>
           <div className='menu' >
