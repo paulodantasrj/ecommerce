@@ -14,20 +14,22 @@ header svg {
 header .logo {
   width: 300px;
 }
+header .box {
+  display: flex;
+}
 header .user {
   display: flex;
-  width: 500px;
-  justify-content: flex-end;
-}
-header .user_box {
-  display: flex;
+  margin: 0 10px;
   color: var(--light-color);
-  margin: 0 50px;
 }
-header .user_box span {
+header .user span {
+  width: 230px;
+  overflow-wrap: break-word;
 }
 header .user a {
-  color: var(--dark-color);
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: var(--secondary-dark-color);
   margin: 0 5px;
 }
 header .cart-icon {
@@ -43,8 +45,8 @@ header .cart-icon span {
   border-radius: 20px;
   color: var(--light-color);
   position: absolute;
-  top: -2px;
-  right: -2px;
+  top: -8px;
+  right: -8px;
   padding: 7px 9px;
   font-size: 10px;
 }

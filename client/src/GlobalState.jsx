@@ -1,18 +1,18 @@
-import React, { createContext, useState } from 'react';
-import ProductsAPI from './api/ProductsAPI';
+import React, { createContext, useState } from 'react'
+import ProductsAPI from './api/ProductsAPI'
 
-//cria um contexto geral da aplicao
-export const GlobalState = createContext();
+//cria um contexto
+export const GlobalState = createContext()
 
-//cria uma funcao que retorna esse contexto
+//cria uma funcao que retorna esse contexto com um provider
 export const DataProvider = ({ children }) => {
-  const [token, setToken] = useState(false);
+  const [token, setToken] = useState(false)
 
-  //cria um objeto que serve como o value a ser passado
+  //cria um objeto para ser passado no value do provider
   const state = {
     token: [token, setToken],
 
     ProductsAPI: ProductsAPI(),
-  };
-  return <GlobalState.Provider value={state}>{children}</GlobalState.Provider>;
-};
+  }
+  return <GlobalState.Provider value={state}>{children}</GlobalState.Provider>
+}

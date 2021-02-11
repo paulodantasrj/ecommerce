@@ -1,15 +1,6 @@
-.products {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-items: center;
-  margin: 20px 0;
-}
-
-/************ Produto item **************/
 .product_card {
   max-width: 300px;
-  background-color: var(--light-color);
+  background-color: var(--color-white);
   overflow: hidden;
   height: 500px;
   border-radius: 4px;
@@ -25,11 +16,11 @@
 .product_img img {
   height: 200px;
   display: block;
-  object-fit: cover;
 }
 .product_box {
   height: 130px;
   margin: 10px 10px;
+  overflow: hidden;
 }
 .product_box h2 {
   width: 100%;
@@ -37,7 +28,7 @@
   text-transform: capitalize;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--secondary-color);
+  color: var(--secondary-dark-color);
   font-size: 15px;
   font-weight: bolder;
   margin: 10px 0;

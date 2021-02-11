@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-//modelo que eh salvo no mongodb
+//colections que eh salvo no mongodb
 const categorySchema = new mongoose.Schema(
   {
     name: {
@@ -14,7 +14,8 @@ const categorySchema = new mongoose.Schema(
     //criado em ...
     //alterado em ...
     timestamps: true,
-  },
-);
+  }
+)
 
-module.exports = mongoose.model('Category', categorySchema);
+//funcao model espera o parametro 1 - nome da colection / 2 - o que sera salvo na colections
+module.exports = mongoose.model('Category', categorySchema)

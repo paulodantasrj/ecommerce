@@ -4,9 +4,16 @@
 /*************** Reset ****************/
 @import url('./reset.css');
 
+/***** Variaveis *****/
 :root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red: #ed3237;
+
   --primary-color: #212121;
-  --secondary-color: #5a2d82;
+
+  --secondary-color: #b282e5;
+  --secondary-dark-color: #401648;
 
   --dark-color: #ff671c;
   --light-color: #fafafa;
@@ -32,7 +39,13 @@ body {
 }
 
 /*************** Header ****************/
-@import url('../../components/Headers/style.css');
+@import url('../../components/Headers/styleHeader.css');
 
 /*************** Produto ****************/
-@import url('../../pages/products/style.css');
+@import url('../../pages/products/styleProduct.css');
+
+/*************** Item Produto ****************/
+@import url('../../pages/products/styleProductItem.css');
+
+/*************** Detalhe Produto ****************/
+@import url('../../pages/products/styleProductDetail.css');
